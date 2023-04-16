@@ -1,5 +1,6 @@
 import { List } from './Feedback.styled';
 import { Notification } from './Notification';
+import PropTypes from 'prop-types';
 export const FeedbackStatistics = ({
   good,
   neutral,
@@ -22,3 +23,10 @@ export const FeedbackStatistics = ({
     )}
   </>
 );
+FeedbackStatistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};

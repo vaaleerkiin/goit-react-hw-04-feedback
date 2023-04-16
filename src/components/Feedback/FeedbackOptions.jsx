@@ -1,5 +1,5 @@
 import { Button, ButtonWrap } from './Feedback.styled';
-
+import PropTypes from 'prop-types';
 export const FeedbackOptions = ({ options, onClick }) => (
   <ButtonWrap>
     {options &&
@@ -10,3 +10,7 @@ export const FeedbackOptions = ({ options, onClick }) => (
       ))}
   </ButtonWrap>
 );
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onClick: PropTypes.func.isRequired,
+};
