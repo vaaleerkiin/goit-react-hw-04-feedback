@@ -9,7 +9,6 @@ export const FeedbackStatistics = ({
   positivePercentage,
 }) => (
   <>
-    {' '}
     {total ? (
       <List>
         <li>good: {good}</li>
